@@ -6,7 +6,7 @@ The basis for this question arose from a conversation around the security of sen
 
 ---
 
-## Test: Try to accurately reconstruct time series data solely based on spatial coordinates.
+## Test: Try to accurately reconstruct time series data based solely on spatial coordinates.
 For this test, I used data from the Mars shallow radar sounder (SHARAD). The data represents a two dimensional subsurface profile across the Martian north polar layered deposits. Based on the X and Y surface coordinates of each radar frame (vertical time series through the subsurface), try to predict the entire time series radar data frame.
 
 ---
@@ -14,7 +14,7 @@ For this test, I used data from the Mars shallow radar sounder (SHARAD). The dat
 ## Method: Construct a neural network architecture to predict time series data from 2 input features.
 After some testing, I came to the conclusion that a simple fully connected neural network was not able to produce accurate time series predictions just based on the two coordinate input features. However, the prediction did look like a rough first-order approximation of the correct output. By using this rough output as the input to a second neural network, fairly good results were achieved.
 
-###_See the code notebook in this repository for full details_
+### _See the code notebook in this repository for full details_
 
 ### Model 1
 The first model uses the X and Y coordinate values as the sole input features. Twenty six hidden layers of varying dimension were used to decode the two input features into a time series with 1024 samples. 
